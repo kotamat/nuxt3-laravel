@@ -63,10 +63,11 @@ class JobController extends Controller
      * Remove the specified resource from storage.
      *
      * @param Job $job
-     * @return bool
+     * @return string[]
      */
     public function destroy(Job $job)
     {
-        return $job->delete();
+        $job->delete();
+        return ['message' => 'deleted!'];
     }
 }
