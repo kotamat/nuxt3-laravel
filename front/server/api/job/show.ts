@@ -2,7 +2,7 @@ import type { IncomingMessage } from "http";
 import { ApiJobJobGETResponse404, DefaultApi } from "~~/spec";
 
 export default async (req: IncomingMessage) => {
-    const url = new URL(`https://example.com${req.url}`)
+    const url = new URL(req.url || "", `http://${req.headers.host}`)
     const jobId = url.searchParams.get("job_id") || 0
 
     const api = new DefaultApi()
