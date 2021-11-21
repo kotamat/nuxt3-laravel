@@ -5,18 +5,17 @@ namespace App\Http\Controllers;
 use App\Http\Requests\Job\StoreRequest;
 use App\Http\Requests\Job\UpdateRequest;
 use App\Models\Job;
-use Illuminate\Database\Eloquent\Collection;
 
 class JobController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return Collection|Job[]
+     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
      */
     public function index()
     {
-        return Job::all();
+        return Job::paginate(10)->withQueryString();
     }
 
     /**

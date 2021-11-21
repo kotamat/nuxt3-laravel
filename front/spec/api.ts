@@ -24,6 +24,141 @@ import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } fr
 /**
  * 
  * @export
+ * @interface ApiJobGETResponse200
+ */
+export interface ApiJobGETResponse200 {
+    /**
+     * 
+     * @type {number}
+     * @memberof ApiJobGETResponse200
+     */
+    'current_page': number;
+    /**
+     * 
+     * @type {Array<ApiJobGETResponse200Data>}
+     * @memberof ApiJobGETResponse200
+     */
+    'data': Array<ApiJobGETResponse200Data>;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiJobGETResponse200
+     */
+    'first_page_url': string;
+    /**
+     * 
+     * @type {number}
+     * @memberof ApiJobGETResponse200
+     */
+    'from': number;
+    /**
+     * 
+     * @type {number}
+     * @memberof ApiJobGETResponse200
+     */
+    'last_page': number;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiJobGETResponse200
+     */
+    'last_page_url': string;
+    /**
+     * 
+     * @type {Array<ApiJobGETResponse200Links>}
+     * @memberof ApiJobGETResponse200
+     */
+    'links': Array<ApiJobGETResponse200Links>;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiJobGETResponse200
+     */
+    'next_page_url': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiJobGETResponse200
+     */
+    'path': string;
+    /**
+     * 
+     * @type {number}
+     * @memberof ApiJobGETResponse200
+     */
+    'per_page': number;
+    /**
+     * 
+     * @type {number}
+     * @memberof ApiJobGETResponse200
+     */
+    'to': number;
+    /**
+     * 
+     * @type {number}
+     * @memberof ApiJobGETResponse200
+     */
+    'total': number;
+}
+/**
+ * 
+ * @export
+ * @interface ApiJobGETResponse200Data
+ */
+export interface ApiJobGETResponse200Data {
+    /**
+     * 
+     * @type {number}
+     * @memberof ApiJobGETResponse200Data
+     */
+    'id': number;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiJobGETResponse200Data
+     */
+    'name': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiJobGETResponse200Data
+     */
+    'created_at': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiJobGETResponse200Data
+     */
+    'updated_at': string;
+    /**
+     * 
+     * @type {number}
+     * @memberof ApiJobGETResponse200Data
+     */
+    'user_id': number;
+}
+/**
+ * 
+ * @export
+ * @interface ApiJobGETResponse200Links
+ */
+export interface ApiJobGETResponse200Links {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiJobGETResponse200Links
+     */
+    'label': string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ApiJobGETResponse200Links
+     */
+    'active': boolean;
+}
+/**
+ * 
+ * @export
  * @interface ApiJobJobDELETEResponse200
  */
 export interface ApiJobJobDELETEResponse200 {
@@ -70,6 +205,43 @@ export interface ApiJobJobGETResponse200 {
      * @memberof ApiJobJobGETResponse200
      */
     'user_id': number;
+}
+/**
+ * 
+ * @export
+ * @interface ApiJobJobGETResponse404
+ */
+export interface ApiJobJobGETResponse404 {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiJobJobGETResponse404
+     */
+    'message': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiJobJobGETResponse404
+     */
+    'exception': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiJobJobGETResponse404
+     */
+    'file': string;
+    /**
+     * 
+     * @type {number}
+     * @memberof ApiJobJobGETResponse404
+     */
+    'line': number;
+    /**
+     * 
+     * @type {Array<ApiJobPOSTResponse403Trace>}
+     * @memberof ApiJobJobGETResponse404
+     */
+    'trace': Array<ApiJobPOSTResponse403Trace>;
 }
 /**
  * 
@@ -327,117 +499,6 @@ export interface ApiJobPOSTResponse422Errors {
      */
     'name': Array<string>;
 }
-/**
- * 
- * @export
- * @interface InlineResponse200
- */
-export interface InlineResponse200 {
-    /**
-     * 
-     * @type {number}
-     * @memberof InlineResponse200
-     */
-    'id': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof InlineResponse200
-     */
-    'name': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof InlineResponse200
-     */
-    'created_at': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof InlineResponse200
-     */
-    'updated_at': string;
-    /**
-     * 
-     * @type {number}
-     * @memberof InlineResponse200
-     */
-    'user_id': number;
-}
-/**
- * 
- * @export
- * @interface InlineResponse500
- */
-export interface InlineResponse500 {
-    /**
-     * 
-     * @type {string}
-     * @memberof InlineResponse500
-     */
-    'message': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof InlineResponse500
-     */
-    'exception': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof InlineResponse500
-     */
-    'file': string;
-    /**
-     * 
-     * @type {number}
-     * @memberof InlineResponse500
-     */
-    'line': number;
-    /**
-     * 
-     * @type {Array<InlineResponse500Trace>}
-     * @memberof InlineResponse500
-     */
-    'trace': Array<InlineResponse500Trace>;
-}
-/**
- * 
- * @export
- * @interface InlineResponse500Trace
- */
-export interface InlineResponse500Trace {
-    /**
-     * 
-     * @type {string}
-     * @memberof InlineResponse500Trace
-     */
-    'file': string;
-    /**
-     * 
-     * @type {number}
-     * @memberof InlineResponse500Trace
-     */
-    'line': number;
-    /**
-     * 
-     * @type {string}
-     * @memberof InlineResponse500Trace
-     */
-    'function': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof InlineResponse500Trace
-     */
-    'class': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof InlineResponse500Trace
-     */
-    'type': string;
-}
 
 /**
  * DefaultApi - axios parameter creator
@@ -448,12 +509,13 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * /api/job
          * @summary /api/job
+         * @param {string} [page] 1
          * @param {string} [contentType] application/json
          * @param {string} [accept] application/json
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiJobGET: async (contentType?: string, accept?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        apiJobGET: async (page?: string, contentType?: string, accept?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/job`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -465,6 +527,10 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
 
             if (contentType !== undefined && contentType !== null) {
                 localVarHeaderParameter['Content-Type'] = String(contentType);
@@ -488,7 +554,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * /api/job/{job}
          * @summary /api/job/{job}
-         * @param {number} job 57
+         * @param {number} job 106
          * @param {string} [contentType] application/json
          * @param {string} [accept] application/json
          * @param {*} [options] Override http request option.
@@ -532,7 +598,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * /api/job/{job}
          * @summary /api/job/{job}
-         * @param {number} job 56
+         * @param {number} job 105
          * @param {string} [contentType] application/json
          * @param {string} [accept] application/json
          * @param {*} [options] Override http request option.
@@ -576,7 +642,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * /api/job/{job}
          * @summary /api/job/{job}
-         * @param {number} job 58
+         * @param {number} job 107
          * @param {string} [contentType] application/json
          * @param {string} [accept] application/json
          * @param {ApiJobJobPUTRequest} [apiJobJobPUTRequest] 
@@ -686,19 +752,20 @@ export const DefaultApiFp = function(configuration?: Configuration) {
         /**
          * /api/job
          * @summary /api/job
+         * @param {string} [page] 1
          * @param {string} [contentType] application/json
          * @param {string} [accept] application/json
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiJobGET(contentType?: string, accept?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<InlineResponse200>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiJobGET(contentType, accept, options);
+        async apiJobGET(page?: string, contentType?: string, accept?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ApiJobGETResponse200>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiJobGET(page, contentType, accept, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * /api/job/{job}
          * @summary /api/job/{job}
-         * @param {number} job 57
+         * @param {number} job 106
          * @param {string} [contentType] application/json
          * @param {string} [accept] application/json
          * @param {*} [options] Override http request option.
@@ -711,7 +778,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
         /**
          * /api/job/{job}
          * @summary /api/job/{job}
-         * @param {number} job 56
+         * @param {number} job 105
          * @param {string} [contentType] application/json
          * @param {string} [accept] application/json
          * @param {*} [options] Override http request option.
@@ -724,7 +791,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
         /**
          * /api/job/{job}
          * @summary /api/job/{job}
-         * @param {number} job 58
+         * @param {number} job 107
          * @param {string} [contentType] application/json
          * @param {string} [accept] application/json
          * @param {ApiJobJobPUTRequest} [apiJobJobPUTRequest] 
@@ -761,18 +828,19 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
         /**
          * /api/job
          * @summary /api/job
+         * @param {string} [page] 1
          * @param {string} [contentType] application/json
          * @param {string} [accept] application/json
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiJobGET(contentType?: string, accept?: string, options?: any): AxiosPromise<Array<InlineResponse200>> {
-            return localVarFp.apiJobGET(contentType, accept, options).then((request) => request(axios, basePath));
+        apiJobGET(page?: string, contentType?: string, accept?: string, options?: any): AxiosPromise<ApiJobGETResponse200> {
+            return localVarFp.apiJobGET(page, contentType, accept, options).then((request) => request(axios, basePath));
         },
         /**
          * /api/job/{job}
          * @summary /api/job/{job}
-         * @param {number} job 57
+         * @param {number} job 106
          * @param {string} [contentType] application/json
          * @param {string} [accept] application/json
          * @param {*} [options] Override http request option.
@@ -784,7 +852,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
         /**
          * /api/job/{job}
          * @summary /api/job/{job}
-         * @param {number} job 56
+         * @param {number} job 105
          * @param {string} [contentType] application/json
          * @param {string} [accept] application/json
          * @param {*} [options] Override http request option.
@@ -796,7 +864,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
         /**
          * /api/job/{job}
          * @summary /api/job/{job}
-         * @param {number} job 58
+         * @param {number} job 107
          * @param {string} [contentType] application/json
          * @param {string} [accept] application/json
          * @param {ApiJobJobPUTRequest} [apiJobJobPUTRequest] 
@@ -828,6 +896,13 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
  */
 export interface DefaultApiApiJobGETRequest {
     /**
+     * 1
+     * @type {string}
+     * @memberof DefaultApiApiJobGET
+     */
+    readonly page?: string
+
+    /**
      * application/json
      * @type {string}
      * @memberof DefaultApiApiJobGET
@@ -849,7 +924,7 @@ export interface DefaultApiApiJobGETRequest {
  */
 export interface DefaultApiApiJobJobDELETERequest {
     /**
-     * 57
+     * 106
      * @type {number}
      * @memberof DefaultApiApiJobJobDELETE
      */
@@ -877,7 +952,7 @@ export interface DefaultApiApiJobJobDELETERequest {
  */
 export interface DefaultApiApiJobJobGETRequest {
     /**
-     * 56
+     * 105
      * @type {number}
      * @memberof DefaultApiApiJobJobGET
      */
@@ -905,7 +980,7 @@ export interface DefaultApiApiJobJobGETRequest {
  */
 export interface DefaultApiApiJobJobPUTRequest {
     /**
-     * 58
+     * 107
      * @type {number}
      * @memberof DefaultApiApiJobJobPUT
      */
@@ -977,7 +1052,7 @@ export class DefaultApi extends BaseAPI {
      * @memberof DefaultApi
      */
     public apiJobGET(requestParameters: DefaultApiApiJobGETRequest = {}, options?: AxiosRequestConfig) {
-        return DefaultApiFp(this.configuration).apiJobGET(requestParameters.contentType, requestParameters.accept, options).then((request) => request(this.axios, this.basePath));
+        return DefaultApiFp(this.configuration).apiJobGET(requestParameters.page, requestParameters.contentType, requestParameters.accept, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

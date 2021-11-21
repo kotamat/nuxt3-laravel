@@ -11,7 +11,7 @@ class JobControllerTest extends TestCase
     public function testIndex()
     {
         $jobs = Job::factory()->count(2)->create();
-        $res = $this->getJson(route("job.index"));
+        $res = $this->getJson(route("job.index", ["page" => 1]));
 
         $res->assertOk();
     }
@@ -22,6 +22,12 @@ class JobControllerTest extends TestCase
         $job = Job::factory()->create();
         $res = $this->getJson(route('job.show', ['job' => $job->id]));
         $res->assertOk();
+    }
+
+    public function testShowNotFound()
+    {
+        $res = $this->getJson(route('job.show', ['job' => 10000000000]));
+        $res->assertNotFound();
     }
 
     public function testDestroy()
