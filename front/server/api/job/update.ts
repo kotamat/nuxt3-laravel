@@ -1,4 +1,4 @@
-import { ApiJobJobPUTRequest, ApiJobJobPUTResponse403, ApiJobJobPUTResponse422, ApiJobPOSTResponse403, ApiJobPOSTResponse422, DefaultApi } from "~~/spec"
+import { ApiJobJobPUTRequest, ApiJobJobPUTResponse403, ApiJobJobPUTResponse422, DefaultApi } from "~~/spec"
 
 export default async () => {
     const api = new DefaultApi

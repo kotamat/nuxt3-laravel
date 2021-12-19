@@ -19,3 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource("job", \App\Http\Controllers\JobController::class);
+
+Route::get('master', \App\Http\Controllers\MasterController::class)->name('master');

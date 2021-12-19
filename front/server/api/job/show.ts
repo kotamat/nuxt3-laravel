@@ -13,14 +13,8 @@ export default async (req: IncomingMessage) => {
     })
     switch (status) {
         case 404:
-            return {
-                data: data as any as ApiJobJobGETResponse404,
-                status
-            }
+            return { data: data as any as ApiJobJobGETResponse404, status }
         default:
-            return {
-                data,
-                status: status as 200
-            }
+            return { data, status: status as 200 }
     }
 }
