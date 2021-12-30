@@ -49,6 +49,8 @@ const convert = (s: Schema): object | string | number => {
 
 type Responses = typeof paths["/api/job/{job}"]["put"]
 
+const pathResolver = (origin: string): string => 
+  origin.replaceAll(/{(.*?)}/g, ":$1")
 
 
 const exampleResponses = Object.entries(paths).flatMap(([path, value]) =>
@@ -59,7 +61,7 @@ const exampleResponses = Object.entries(paths).flatMap(([path, value]) =>
       ["put", "get", "all", "head", "post", "delete", "patch", "options"].includes(str)
     if (!isRestMethod(k)) return
     return {
-      path: "http://localhost" + path,
+      path: "http://localhost" + pathResolver(path),
       method: k,
       status: +happyResponse[0], // 一旦200だけで
       examples: convert(happyResponse[1]?.content?.['application/json'].schema as Schema)
