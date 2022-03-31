@@ -621,13 +621,6 @@
   resolved "https://registry.npmjs.org/@trysound/sax/-/sax-0.2.0.tgz#cccaab758af56761eb7bf37af6f03f326dd798ad"
   integrity sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==
 
-"@types/axios@^0.14.0":
-  version "0.14.0"
-  resolved "https://registry.npmjs.org/@types/axios/-/axios-0.14.0.tgz#ec2300fbe7d7dddd7eb9d3abf87999964cafce46"
-  integrity sha1-7CMA++fX3d1+udOr+HmZlkyvzkY=
-  dependencies:
-    axios "*"
-
 "@types/cookie@^0.4.1":
   version "0.4.1"
   resolved "https://registry.npmjs.org/@types/cookie/-/cookie-0.4.1.tgz#bfd02c1f2224567676c1545199f87c3a861d878d"
@@ -1342,7 +1335,7 @@ available-typed-arrays@^1.0.5:
   resolved "https://registry.npmjs.org/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz#92f95616501069d07d10edb2fc37d3e1c65123b7"
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
 
-axios@*, axios@^0.24.0:
+axios@^0.24.0:
   version "0.24.0"
   resolved "https://registry.npmjs.org/axios/-/axios-0.24.0.tgz#804e6fa1e4b9c5288501dd9dff56a7a0940d20d6"
   integrity sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==
@@ -3670,9 +3663,9 @@ minimatch@^3.0.4, minimatch@~3.0.4:
     brace-expansion "^1.1.7"
 
 minimist@^1.2.0, minimist@^1.2.5:
-  version "1.2.5"
-  resolved "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
-  integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.6.tgz#8637a5b759ea0d6e98702cfb3a9283323c93af44"
+  integrity sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==
 
 minipass@^2.6.0, minipass@^2.9.0:
   version "2.9.0"
